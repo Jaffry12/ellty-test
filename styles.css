@@ -1,0 +1,113 @@
+/* Ellty Test – Checkbox List component */
+:root{
+  --bg: #F4F6F8;          /* page background */
+  --card: #FFFFFF;        /* card background */
+  --text: #1E1E1E;
+  --muted: #8D9198;
+  --line: #E8EAED;
+  --row: #F6F7F9;
+  --row-hover: #EEF1F5;
+  --shadow: 0 8px 20px rgba(0,0,0,.08);
+  --radius: 10px;
+  --accent: #3478F6;      /* blue checkmark like Figma demo */
+  --btn: #FFD33D;         /* yellow button */
+  --btn-hover: #FFC71A;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stage{
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card{
+  width: 300px;                   /* visually close to the Figma */
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 16px 14px;
+  border: 1px solid #F1F2F4;
+}
+
+.list{
+  list-style: none;
+  margin: 0 0 12px 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+/* Row */
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--row);
+  border: 1px solid var(--line);
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.item:hover{
+  background: var(--row-hover);
+  border-color: #DDE1E6;
+}
+
+.item--head{
+  background: #FFFFFF;
+}
+
+.label{
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+}
+
+/* Modern checkbox styling via accent-color (widely supported) */
+.cb{
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+/* Button */
+.btn{
+  width: 100%;
+  height: 36px;
+  background: var(--btn);
+  border: 1px solid #E3B31A;
+  color: #3A2E00;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.04) inset;
+  transition: background .15s ease, transform .02s ease;
+}
+
+.btn:hover{ background: var(--btn-hover); }
+.btn:active{ transform: translateY(1px); }
+.btn:focus-visible{
+  outline: 2px solid #2D6CF6;
+  outline-offset: 2px;
+}
+
+/* Responsive polish */
+@media (max-width: 360px){
+  .card{ width: 100%; }
+}

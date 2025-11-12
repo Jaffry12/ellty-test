@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ellty Test – Checkbox List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <div class="card" role="group" aria-label="Page selection">
+      <ul class="list" role="list">
+        <li class="item item--head">
+          <span class="label">All pages</span>
+          <input id="allPages" type="checkbox" class="cb" aria-label="Toggle all pages" />
+        </li>
+        <li class="item">
+          <span class="label">Page 1</span>
+          <input type="checkbox" class="cb" />
+        </li>
+        <li class="item">
+          <span class="label">Page 2</span>
+          <input type="checkbox" class="cb" />
+        </li>
+        <li class="item">
+          <span class="label">Page 3</span>
+          <input type="checkbox" class="cb" />
+        </li>
+        <li class="item">
+          <span class="label">Page 4</span>
+          <input type="checkbox" class="cb" />
+        </li>
+      </ul>
+      <button class="btn" type="button" id="doneBtn">Done</button>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
